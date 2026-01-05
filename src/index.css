@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: 2 6 23;
+    --color-surface: 15 23 42;
+  }
+  
+  body {
+    @apply bg-background text-white antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-surface/80 backdrop-blur-md border border-white/10 rounded-xl shadow-lg;
+  }
+  
+  .glass-border {
+    @apply border border-white/10;
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 10px theme('colors.accent'), 0 0 20px theme('colors.accent');
+  }
+  
+  .neon-box {
+    box-shadow: 0 0 10px theme('colors.accent'), 0 0 20px theme('colors.accent');
+  }
+
+  .red-alert-glow {
+    box-shadow: 0 0 20px theme('colors.danger'), 0 0 50px theme('colors.danger') inset;
+    animation: urgent-pulse 1s infinite;
+  }
+}
+
+@keyframes urgent-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: theme('colors.background');
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.surface');
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.secondary');
+}
