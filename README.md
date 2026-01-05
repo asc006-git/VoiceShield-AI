@@ -231,9 +231,3 @@ By combining live AI analysis, guardian involvement, and responsible escalation,
 
 Contributions are welcome.
 If you have ideas for improvements, feature enhancements, or bug fixes, feel free to fork the repository and submit a pull request.
-- A **submission-specific README**
-- A **future roadmap section**
-- A **judge explanation version**
-
-Just tell me.
-```
